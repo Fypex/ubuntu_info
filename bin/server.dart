@@ -10,7 +10,19 @@ const String x_api_key = 'NXlkZGg1bmVqdTl5MTY5a2I3NnRyM2I0cWV5YTVoMmI=';
 final String ip = '127.0.0.1';
 const int port = 25560;
 
-final _router = Router()..post('/server-info', _rootHandler);
+final _router = Router()
+  ..post('/server-info', _rootHandler)
+  ..get('/', _index);
+
+Response _index(Request req) {
+  return Response(
+    200,
+    body: jsonEncode(
+      {'status': 'ok'},
+    ),
+    headers: {"Content-Type": "application/json"},
+  );
+}
 
 Response _rootHandler(Request req) {
   const int megaByte = 1024 * 1024;
