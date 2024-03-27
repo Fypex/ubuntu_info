@@ -4,7 +4,7 @@ import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart';
 import 'package:shelf_router/shelf_router.dart';
 import 'package:system_info2/system_info2.dart';
-import 'package:system_resources/system_resources.dart';
+//import 'package:system_resources/system_resources.dart';
 
 const String x_api_key = 'NXlkZGg1bmVqdTl5MTY5a2I3NnRyM2I0cWV5YTVoMmI=';
 final String ip = '127.0.0.1';
@@ -67,15 +67,15 @@ Response _rootHandler(Request req) {
           'free': virtualMemoryFree,
           'busy': virtualMemoryTotal - virtualMemoryFree
         },
-        'cpu_load_average': (SystemResources.cpuLoadAvg() * 100).toInt(),
-        'memory_usage': (SystemResources.memUsage() * 100).toInt()
+        // 'cpu_load_average': (SystemResources.cpuLoadAvg() * 100).toInt(),
+        // 'memory_usage': (SystemResources.memUsage() * 100).toInt()
       },
     ),
   );
 }
 
 void main(List<String> args) async {
-  SystemResources.init();
+  //SystemResources.init();
 
   final handler = Pipeline()
       .addMiddleware(
