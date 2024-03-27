@@ -8,7 +8,7 @@ import 'package:system_resources/system_resources.dart';
 
 const String x_api_key = 'NXlkZGg1bmVqdTl5MTY5a2I3NnRyM2I0cWV5YTVoMmI=';
 final String ip = '127.0.0.1';
-const int port = 8080;
+const int port = 25560;
 
 final _router = Router()..post('/server-info', _rootHandler);
 
