@@ -7,7 +7,7 @@ import 'package:system_info2/system_info2.dart';
 //import 'package:system_resources/system_resources.dart';
 
 const String x_api_key = 'NXlkZGg1bmVqdTl5MTY5a2I3NnRyM2I0cWV5YTVoMmI=';
-final String ip = '127.0.0.1';
+final String ip = '0.0.0.0';
 const int port = 80;
 
 final _router = Router()
